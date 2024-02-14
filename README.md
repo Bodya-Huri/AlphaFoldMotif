@@ -9,4 +9,5 @@ Our program will retrieve the protein sequence and a pdb file with the structure
 The output will be a PyMOL session file (.pse) and a figure of the protein with colored motifs.
 
 Bohdana Hurieva: https://bodya-huri.github.io/
+
 Simona Manasra: https://mlkndt.github.io/
