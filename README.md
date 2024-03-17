@@ -8,6 +8,22 @@ The program's input will be a UniProt sequence ID and the amino acid sequence of
 Our program will retrieve the protein sequence and a PDB file with the structure from the AlphaFold database, find the indicated motif, and visualize it using [PyMOL](https://pymol.org/2/).
 The output will be a PyMOL session file (.pse) with all proteins and their colored motifs.
 
+# Instructions
+You need to set up a conda environment with all the requirements installed:
+conda create -n new_env
+conda activate new_env
+conda install conda-forge::biopython
+conda install conda-forge::pymol-open-source
+
+To run the tests:
+
+To run the program, you have to specify two arguments - a list of IDs and motifs. You can do it using the following flags:
+-f: txt file with a list of IDs
+-i: IDs specified directly from a command line
+-m: motifs specified directly from a command line
+
+Example of running a program: python3 motif_finder.py -f data.txt -m VM
+
 Bohdana Hurieva: https://bodya-huri.github.io/
 
 Simona Manasra: https://mlkndt.github.io/
