@@ -8,29 +8,58 @@ The program's input will be a UniProt sequence ID and the amino acid sequence of
 Our program will retrieve the protein sequence and a PDB file with the structure from the AlphaFold database, find the indicated motif, and visualize it using [PyMOL](https://pymol.org/2/).
 The output will be a PyMOL session file (.pse) with all proteins and their colored motifs.
 
-## Instructions
-You need to set up a conda environment with all the requirements installed:
+## Installation
 
+You need to clone this repository.
 ```bash
-conda create -n new_env
-conda activate new_env
+git clone https://github.com/Bodya-Huri/AlphaFoldMotif afmotif
+cd afmotif
+```
+
+Now, create a conda environment with all the requirements installed.
+```bash
+conda create -n afmotif
+conda activate afmotif
 conda install conda-forge::biopython
 conda install conda-forge::pymol-open-source
 ```
 
-To run the tests:
+## How to use Protein Motif Finder
 
-To run the program, you have to specify two arguments - a list of IDs and motifs. You can do it using the following flags:
+First, activate the working environment.
+```bash
+conda activate afmotif
+```
 
-- -f: txt file with a list of IDs
-- -i: IDs specified directly from a command line
-- -m: motifs specified directly from a command line
+Then, launch the program.
 
-Example of running a program: 
+#### Providing Uniprot Accession IDs from a command line.
+```bash
+python3 motif_finder.py -i Q9NT68 -m VM
+```
+
+#### Using a txt file with a list of Uniprot Accession IDs.
 ```bash
 python3 motif_finder.py -f data.txt -m VM
 ```
 
+## Testing
+
+You need to download and unzip ```tmp.zip``` file to have a ```tmp``` folder with a ```AF-Q5VSL9-F1-model_v4.pdb``` file.
+Run a test from the folder with the ```def.py``` file.
+```bash
+pytest
+```
+
+You might need to install pytest first.
+```bash
+conda install pytest
+```
+
+After running the tests, make sure to delete a ```AF-Q5VSL9-F1-model_v4.pdb``` file from ```tmp``` folder before running the actual program.
+
+## Authors
+Simona Manasra: https://mlkndt.github.io/
+
 Bohdana Hurieva: https://bodya-huri.github.io/
 
-Simona Manasra: https://mlkndt.github.io/
