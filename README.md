@@ -45,7 +45,7 @@ python3 motif_finder.py -f data.txt -m VM
 
 ## Testing
 
-You need to download and unzip ```tmp.zip``` file to have a ```tmp``` folder with a ```AF-Q5VSL9-F1-model_v4.pdb``` file.
+You need to unzip ```tmp.zip``` file to have a ```tmp``` folder with a ```AF-Q5VSL9-F1-model_v4.pdb``` file in it.
 Run a test from the folder with the ```def.py``` file.
 ```bash
 pytest
